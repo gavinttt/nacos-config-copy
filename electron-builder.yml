@@ -1,0 +1,28 @@
+appId: com.internal.nacos-config-copy
+productName: NacosConfigCopy
+directories:
+  buildResources: build
+  output: release
+files:
+  - out/**/*
+  - package.json
+asar: true
+mac:
+  category: public.app-category.developer-tools
+  identity: null
+  target:
+    - target: dmg
+      arch:
+        - arm64
+        - x64
+dmg:
+  sign: false
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  shortcutName: NacosConfigCopy

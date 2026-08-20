@@ -1,0 +1,44 @@
+{
+  "name": "nacos-config-copy",
+  "version": "1.0.0",
+  "description": "跨命名空间拷贝/同步 Nacos 配置：key/value 规则替换 + 双栏逐行对比 + 逐条确认发布",
+  "main": "./out/main/index.js",
+  "author": "internal",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "start": "electron-vite preview",
+    "build": "electron-vite build",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:win": "npm run build && electron-builder --win",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "3.0.2",
+    "@electron-toolkit/utils": "4.0.0",
+    "electron-store": "11.0.2"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "6.3.2",
+    "@monaco-editor/react": "4.7.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "antd": "6.6.1",
+    "electron": "43.4.1",
+    "electron-builder": "26.15.3",
+    "electron-vite": "5.0.0",
+    "monaco-editor": "0.56.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "4.1.11",
+    "yaml": "2.9.0",
+    "zustand": "5.0.15"
+  }
+}
